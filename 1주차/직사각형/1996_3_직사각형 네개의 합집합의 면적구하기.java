@@ -1,3 +1,4 @@
+/*dfs를 활용*/
 import java.util.*;
 class Main{
     static int[][] arr = new int[102][102];
@@ -16,7 +17,7 @@ class Main{
                 for(int k = ly;k<ry;k++){
                     arr[j][k]=1;
                 }
-            }
+            }//사각형이 그려자는 부분을 모두 1로 만듦
         }
         for(int i=1;i<101;i++){
             for(int j=1;j<101;j++){
@@ -29,7 +30,7 @@ class Main{
         System.out.println(cnt);
     }
     static void dfs(int x,int y){
-        cnt++;
+        cnt++;//넓이를 구하는 변수 증가 시킴
         for(int i=0;i<4;i++){
             int newx = x+dx[i];
             int newy = y+dy[i];
