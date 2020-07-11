@@ -1,3 +1,4 @@
+/*dfs로 해결*/
 import java.util.*;
 class Main{
     static int N;
@@ -28,13 +29,13 @@ class Main{
         }
     }
     static void dfs(int num){
-        if(visited[num]==2) return;
+        if(visited[num]==2) return;//첫번째 줄과 두번째줄이 모두 탐색된 경우임으로
         visited[num]++;
-        dfs(arr[num]);
+        dfs(arr[num]);//두번째 줄의 숫자를 가진 인덱스를 확인
     }
     static void init(){
         for(int i=1;i<=N;i++){
-            if(visited[i]<2){
+            if(visited[i]<2){//2보다 작으면 소용없음
                visited[i]=0;
             }    
         }
