@@ -1,15 +1,16 @@
+/*dfs로 해결*/
 import java.util.*;
 class Main{
     static int[] dx = {-1,1,0,0};
     static int[] dy = {0,0,-1,1};
-    static int cnt = 0;
+    static int cnt = 0;//단지안 집의 개수를 세는 변수
     static int[][] arr;
     static int[][] visited;
     static int N;
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
-        ArrayList<Integer> countList = new ArrayList<>();
+        ArrayList<Integer> countList = new ArrayList<>();//단지안 집의 개수와 단지의 개수를 파악하기위한 리스트 선언
         arr = new int[N+1][N+1];
         visited = new int[N+1][N+1];
         for(int i =0;i<N;i++){
